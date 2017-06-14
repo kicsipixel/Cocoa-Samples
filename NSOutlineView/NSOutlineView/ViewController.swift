@@ -95,6 +95,7 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
         }
     }
     
+  /*
     func outlineView(_ outlineView: NSOutlineView, isGroupItem item: Any) -> Bool {
         switch item {
         case let country as Country:
@@ -105,6 +106,7 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
             return false
         }
     }
+    */
     
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         switch item {
