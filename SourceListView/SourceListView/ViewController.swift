@@ -92,9 +92,9 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
     func outlineView(_ outlineView: NSOutlineView, isGroupItem item: Any) -> Bool {
         switch item {
         case let continent as Continent:
-            return true
+            return true /*
         case let country as Country:
-            return true
+            return true */
         default:
             return false
         }
