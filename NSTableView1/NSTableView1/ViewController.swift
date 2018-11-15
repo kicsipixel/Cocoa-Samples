@@ -30,11 +30,11 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
-        guard let cell = tableView.make(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else { return nil }
+        guard let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else { return nil }
 
-        if tableColumn?.identifier == "firstName" {
+        if (tableColumn?.identifier)!.rawValue == "firstName" {
             cell.textField?.stringValue = people[row].firstName
-        } else if tableColumn?.identifier == "lastName" {
+        } else if (tableColumn?.identifier)!.rawValue == "lastName" {
             cell.textField?.stringValue = people[row].lastName
         } else {
             cell.textField?.stringValue = people[row].mobileNumber
@@ -44,4 +44,3 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
 
 }
-
