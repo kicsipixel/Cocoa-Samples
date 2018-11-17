@@ -52,8 +52,8 @@ extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let person = data[row]
         
-        let cell = tableView.makeView(withIdentifier: (tableColumn!.identifier), owner: self) as? NSTableCellView
-        cell?.textField?.stringValue = person[tableColumn!.identifier.rawValue]!
+        guard let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else { return nil }
+        cell.textField?.stringValue = person[tableColumn!.identifier.rawValue]!
         
         return cell
     }

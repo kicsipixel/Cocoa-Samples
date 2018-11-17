@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class ViewController: NSViewController {
     
     @IBOutlet var tableView: NSTableView!
     var people: [Person] = []
@@ -23,24 +23,27 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         people.append(person2)
         people.append(person3)
     }
+}
+
+extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return people.count
+        return (people.count)
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let person = people[row]
         
         guard let cell = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else { return nil }
-
+        
         if (tableColumn?.identifier)!.rawValue == "firstName" {
-            cell.textField?.stringValue = people[row].firstName
+            cell.textField?.stringValue = person.firstName
         } else if (tableColumn?.identifier)!.rawValue == "lastName" {
-            cell.textField?.stringValue = people[row].lastName
+            cell.textField?.stringValue = person.lastName
         } else {
-            cell.textField?.stringValue = people[row].mobileNumber
+            cell.textField?.stringValue = person.mobileNumber
         }
         
         return cell
     }
-
 }
