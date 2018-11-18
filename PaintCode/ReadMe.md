@@ -1,4 +1,4 @@
-## NSTableView Sample
+## PaintCode Sample
 
 ![NSTableView](PaintCode1.png)
 
