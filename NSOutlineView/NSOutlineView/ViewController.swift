@@ -111,21 +111,21 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         switch item {
         case let country as Country:
-            let view = outlineView.make(withIdentifier: "HeaderCell", owner: self) as! NSTableCellView
+            let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "HeaderCell"), owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = country.country
             }
             return view
             
         case let family as Family:
-            let view = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
+            let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "DataCell"), owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = family.familyName
             }
             return view
             
         case let person as Person:
-            let view = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
+            let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "DataCell"), owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = person.name
             }
