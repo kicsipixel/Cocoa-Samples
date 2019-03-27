@@ -95,6 +95,7 @@
 				TargetAttributes = {
 					570F1A2C219D7E5400870773 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -282,7 +283,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.purzelbaum.NSTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -301,7 +302,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hu.purzelbaum.NSTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
