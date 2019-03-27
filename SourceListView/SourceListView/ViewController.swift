@@ -103,14 +103,14 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         switch item {
         case let continent as Continent:
-            let view = outlineView.make(withIdentifier: "HeaderCell", owner: self) as! NSTableCellView
+            let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "HeaderCell"), owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = continent.continentName
             }
             return view
             
         case let country as Country:
-            let view = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
+            let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "DataCell"), owner: self) as! NSTableCellView
             if let textField = view.textField {
                 textField.stringValue = country.countryName
             }
@@ -120,7 +120,7 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
             return view
             
             case let city as City:
-            let view = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
+                let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "DataCell"), owner: self) as! NSTableCellView
 
             if let textField = view.textField {
                 textField.stringValue = city.cityName
