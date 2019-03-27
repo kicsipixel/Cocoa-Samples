@@ -8,15 +8,9 @@
 
 import Cocoa
 
-class Person: NSObject {
+struct Person {
     let firstName: String
     let lastName: String
     let mobileNumber: String
-    
-    init(firstName: String, lastName: String, mobileNumber: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.mobileNumber = mobileNumber
-    }
 
 }
