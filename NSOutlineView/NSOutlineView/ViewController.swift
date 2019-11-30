@@ -27,22 +27,22 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
         let person6 = Person(name: "Henry VIII")
         
         let family1 = Family(familyName: "Lothbrok")
-        let familty2 = Family(familyName: "Haraldson")
-        let familty3 = Family(familyName: "Tudor")
+        let family2 = Family(familyName: "Haraldson")
+        let family3 = Family(familyName: "Tudor")
         
         family1.member.append(person1)
         family1.member.append(person2)
         family1.member.append(person3)
         
-        familty2.member.append(person4)
+        family2.member.append(person4)
         
-        familty3.member.append(person5)
-        familty3.member.append(person6)
+        family3.member.append(person5)
+        family3.member.append(person6)
         
         country1.families.append(family1)
-        country1.families.append(familty2)
+        country1.families.append(family2)
         
-        country2.families.append(familty3)
+        country2.families.append(family3)
         
         // Allow HeaderCell to move up
         // outlineView.floatsGroupRows = false
@@ -136,4 +136,3 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
         }
     }
 }
-
