@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Item" customModule="NSCollectionView" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView autoresizesSubviews="NO" distribution="fill" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPC-4Y-Des">
+                    <rect key="frame" x="36" y="28" width="4" height="20"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-jT-eXO">
+                            <rect key="frame" x="-2" y="0.0" width="8" height="20"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="Xfq-Cb-n0u">
+                                <font key="font" metaFont="system" size="17"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="hPC-4Y-Des" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="S43-fz-3Qz"/>
+                <constraint firstItem="hPC-4Y-Des" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="ZJt-fd-5QS"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+        <collectionViewItem id="cBN-yn-4sc" customClass="Item" customModule="NSCollectionView" customModuleProvider="target">
+            <connections>
+                <outlet property="letterLabel" destination="gYm-jT-eXO" id="bBe-h8-SvQ"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="L9g-mm-fDY"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+</document>
