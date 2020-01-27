@@ -8,30 +8,17 @@
 
 import Cocoa
 
-class City: NSObject {
-    let cityName: String
-    
-    init(cityName: String) {
-        self.cityName = cityName
-    }
+struct City {
+    var cityName: String
 }
 
-class Country: NSObject {
-    let countryName: String
-    let flag: NSImage
+struct Country {
+    var countryName: String
+    var flag: NSImage
     var cities: [City] = []
-    
-    init(countryName: String, flag: NSImage) {
-        self.countryName = countryName
-        self.flag = flag
-    }
 }
 
-class Continent: NSObject {
-    let continentName: String
+struct Continent {
+    var continentName: String
     var countries: [Country] = []
-    
-    init(continentName: String) {
-        self.continentName = continentName
-    }
 }

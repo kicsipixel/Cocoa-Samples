@@ -12,9 +12,9 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
     
     @IBOutlet var outlineView: NSOutlineView!
     
-    let continent1 = Continent(continentName: "Europe")
-    let continent2 = Continent(continentName: "Asia")
-    let continent3 = Continent(continentName: "Americas")
+    var continent1 = Continent(continentName: "Europe")
+    var continent2 = Continent(continentName: "Asia")
+    var continent3 = Continent(continentName: "Americas")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,10 @@ class ViewController: NSViewController, NSOutlineViewDelegate, NSOutlineViewData
         let city3 = City(cityName: "Tokyo")
         let city4 = City(cityName: "Mexico city")
         
-        let country1 = Country(countryName: "Germany", flag: NSImage(named:"Germany")!)
-        let country2 = Country(countryName: "Hungary", flag: NSImage(named:"Hungary")!)
-        let country3 = Country(countryName: "Japan", flag: NSImage(named:"Japan")!)
-        let country4 = Country(countryName: "Mexico", flag: NSImage(named:"Mexico")!)
+        var country1 = Country(countryName: "Germany", flag: NSImage(named:"Germany")!)
+        var country2 = Country(countryName: "Hungary", flag: NSImage(named:"Hungary")!)
+        var country3 = Country(countryName: "Japan", flag: NSImage(named:"Japan")!)
+        var country4 = Country(countryName: "Mexico", flag: NSImage(named:"Mexico")!)
         
         country1.cities.append(city1)
         country2.cities.append(city2)

@@ -91,7 +91,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = purzelbaum.hu;
 				TargetAttributes = {
 					57D3473A1EF1A3F6004493DD = {
@@ -273,6 +273,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 358WHQF94W;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = SourceListView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.purzelbaum.SourceListView;
@@ -289,6 +290,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 358WHQF94W;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = SourceListView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hu.purzelbaum.SourceListView;
