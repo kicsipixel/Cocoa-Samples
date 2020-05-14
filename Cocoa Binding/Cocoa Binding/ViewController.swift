@@ -10,9 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @objc dynamic var peopleArray: [Person] = [Person(firstName: "Ragnar", lastName: "Lothbrok", mobileNumber: "555-1234"),
-                                               Person(firstName: "Bjorn", lastName: "Lothbrok", mobileNumber: "555-3412"),
-                                               Person(firstName: "Harald", lastName: "Finehair", mobileNumber: "555-4512")
+    @objc dynamic var peopleArray: [Person] = [Person(firstName: "Ragnar", lastName: "Lothbrok", mobileNumber: "555-12347"),
+                                               Person(firstName: "Bjorn", lastName: "Lothbrok", mobileNumber: "555-34129"),
+                                               Person(firstName: "Harald", lastName: "Finehair", mobileNumber: "555-45128")
                                                 ]
 
     override func viewDidLoad() {

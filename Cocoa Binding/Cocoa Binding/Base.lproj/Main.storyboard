@@ -697,6 +697,7 @@
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="KJJ-pO-nFv"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
@@ -709,13 +710,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4y-HG-oCl">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="235"/>
                                 <clipView key="contentView" drawsBackground="NO" id="w4A-sw-Qsn">
-                                    <rect key="frame" x="1" y="0.0" width="478" height="269"/>
+                                    <rect key="frame" x="1" y="0.0" width="478" height="234"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="xdY-R4-CZz" viewBased="YES" id="XJ2-BW-siL">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="244"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="209"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -847,12 +848,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9H-Ce-pg4">
+                                <rect key="frame" x="277" y="241" width="195" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="9B2-n5-crJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="AMw-tr-Igb" name="predicate" keyPath="filterPredicate" id="vmj-X8-lvr">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayName">predicate</string>
+                                                <string key="NSPredicateFormat">self.firstName contains[cd] $value OR self.lastName contains[cd] $value OR self.mobileNumber contains[cd] $value</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </searchFieldCell>
+                            </searchField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="A4y-HG-oCl" secondAttribute="bottom" id="9je-da-kwP"/>
                             <constraint firstAttribute="trailing" secondItem="A4y-HG-oCl" secondAttribute="trailing" id="DcQ-9z-kPk"/>
                             <constraint firstItem="A4y-HG-oCl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="SZk-rp-TiO"/>
-                            <constraint firstItem="A4y-HG-oCl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="zEL-X6-APW"/>
+                            <constraint firstItem="A4y-HG-oCl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="35" id="zEL-X6-APW"/>
                         </constraints>
                     </view>
                 </viewController>
