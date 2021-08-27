@@ -1,7 +1,7 @@
 # Cocoa Sample codes
 ## Some very simple code for macOS Cocoa/Swift development
-https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white
-https://badgen.net/badge/platform/macOS/
+![](https://badgen.net/badge/language/Swift/orange)
+![](https://badgen.net/badge/platform/macOS/)
 
 It is not easy to find good resources for macOS Swift development, especially if you want to create the UI programatically. Hereby I collected some of my working code snippets, maybe it will be useful.
 
