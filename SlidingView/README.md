@@ -1,3 +1,5 @@
 # Sliding View
 
-This code was a complete mess and didn't work, removed. Working on it.
+![](SlidingView.png)
+
+I kept the NSWindow and NSView + ViewController from Storyboard and added the additional Views and Button programatically.
